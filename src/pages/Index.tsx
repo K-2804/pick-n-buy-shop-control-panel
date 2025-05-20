@@ -13,7 +13,7 @@ const Index = () => {
         <div className="w-full max-w-md mx-auto mb-8 text-center animate-fade-in">
           <div className="flex items-center justify-center mb-4">
             <span className="bg-picknpay-purple text-white text-2xl font-bold rounded-md p-2">P&P</span>
-            <h1 className="text-3xl font-bold ml-3">Pick-n-Pay</h1>
+            <h1 className="text-3xl font-bold ml-3">Pick-n-Buy</h1>
           </div>
           <p className="text-gray-600">Shop Owner Dashboard</p>
         </div>
