@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -98,7 +97,7 @@ const OrderCard = ({ order, onStatusUpdate }: OrderCardProps) => {
                   <span className="truncate max-w-[200px]">
                     {item.productName} x{item.quantity}
                   </span>
-                  <span className="font-medium">₹{item.totalPrice.toFixed(2)}</span>
+                  <span className="font-medium">₹{(Number(item.price) * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
             </div>

@@ -3,15 +3,33 @@ import React, { useState } from 'react';
 import SideNav from '@/components/SideNav';
 import DashboardHeader from '@/components/DashboardHeader';
 import OrderCard from '@/components/OrderCard';
-import { mockOrders, Order } from '@/lib/firebase';
+import { Order } from '@/lib/firebase';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
+import { useEffect } from 'react';
+import { realFirestore } from '@/lib/firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 const Orders = () => {
-  const [orders, setOrders] = useState<Order[]>(mockOrders);
+  
   const [searchQuery, setSearchQuery] = useState('');
+
+  const [orders, setOrders] = useState<Order[]>([]);
+
+useEffect(() => {
+  const unsubscribe = onSnapshot(collection(realFirestore, 'orders'), (snapshot) => {
+    const liveOrders = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as Order[];
+
+    setOrders(liveOrders);
+  });
+
+  return () => unsubscribe(); // stop listening when page unmounts
+}, []);
   
   const handleOrderStatusUpdate = () => {
     // In a real app, you would refresh the orders from Firebase
@@ -19,7 +37,7 @@ const Orders = () => {
   };
   
   const filterOrders = (status?: Order['status']) => {
-    let filteredOrders = [...mockOrders];
+    let filteredOrders = [...orders];
     
     // Filter by status if provided
     if (status) {

@@ -2,6 +2,44 @@
 // Note: This is a mock Firebase implementation for demonstration
 // In a real application, you would import and initialize Firebase
 
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  onSnapshot,
+  updateDoc,
+  doc
+} from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAigm4R9KA3xeQEYawCdg9rvK0i-8GqeSQ",
+  authDomain: "picknbuyorders.firebaseapp.com",
+  projectId: "picknbuyorders",
+  storageBucket: "picknbuyorders.firebasestorage.app",
+  messagingSenderId: "405248122143",
+  appId: "1:405248122143:web:e3d1e42f6188e660e0242a",
+  measurementId: "G-1QVRWE2JNT"
+};
+
+const app = initializeApp(firebaseConfig);
+
+// 👇 Rename this so it doesn't conflict with your mock object
+const realFirestore = getFirestore(app);
+
+export {
+  realFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  onSnapshot,
+  updateDoc,
+  doc
+};
+
 export interface Order {
   id: string;
   customerId: string;
