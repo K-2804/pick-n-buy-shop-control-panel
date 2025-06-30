@@ -4,7 +4,8 @@ A web interface for local shop owners to manage product listings, track incoming
 
 ## 🔧 Tech Stack
 - ReactJS
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 - CSS
 
 ## 🌟 Features
