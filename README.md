@@ -15,6 +15,11 @@ A web interface for local shop owners to manage product listings, track incoming
 - 🔄 Update order status (e.g., "Preparing", "Out for Delivery", "Delivered")
 - 📊 Dashboard showing active orders and stock
 
+## 📌 Use Case Examples
+- Grocery store managing real-time online orders
+- Food stall owner updating menu and tracking live requests
+- Small business dashboard for local deliveries
+
 ## 🚀 How to Run Locally
 ```bash
 git clone https://github.com/<your-username>/pick-n-buy-shop-dashboard.git
