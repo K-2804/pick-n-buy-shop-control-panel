@@ -6,6 +6,7 @@ A web interface for local shop owners to manage product listings, track incoming
 - ReactJS
 - JavaScript
 - TypeScript
+- Firestore Database
 - CSS
 
 ## 🌟 Features
