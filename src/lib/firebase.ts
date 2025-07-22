@@ -289,7 +289,6 @@ export const firestore = {
 
   addProduct: async (product: Omit<Product, 'id' | 'createdAt' | 'updatedAt'>) => {
     console.log(`Adding product: ${product.name}`);
-    // In a real app, you would add the product to Firebase
     return { id: `prod-new-${Date.now()}` };
   },
   
@@ -302,14 +301,12 @@ export const firestore = {
   
   deleteProduct: async (productId: string) => {
     console.log(`Deleting product ${productId}`);
-    // In a real app, you would delete the product from Firebase
     return true;
   },
   
  
   updateShopProfile: async (shopId: string, profile: Partial<ShopProfile>) => {
     console.log(`Updating shop profile ${shopId}`);
-    // In a real app, you would update the shop profile in Firebase
     return true;
   }
 };
