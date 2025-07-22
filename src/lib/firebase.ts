@@ -1,7 +1,4 @@
 
-// Note: This is a mock Firebase implementation for demonstration
-// In a real application, you would import and initialize Firebase
-
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
