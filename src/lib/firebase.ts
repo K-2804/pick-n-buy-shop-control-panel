@@ -281,7 +281,6 @@ export const firestore = {
     return mockShopProfile;
   },
   
-  // Update order status
   updateOrderStatus: async (orderId: string, status: Order['status']) => {
     console.log(`Updating order ${orderId} status to ${status}`);
     // In a real app, you would update the order in Firebase
