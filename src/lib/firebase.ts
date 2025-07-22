@@ -23,7 +23,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// 👇 Rename this so it doesn't conflict with your mock object
 const realFirestore = getFirestore(app);
 
 export {
@@ -238,11 +237,9 @@ export const mockShopProfile: ShopProfile = {
   pickupAvailable: true
 };
 
-// Mock Firebase auth functions
 export const auth = {
   currentUser: null as User | null,
   
-  // Sign in
   signInWithEmailAndPassword: async (email: string, password: string) => {
     if (email === "demo@picknpay.com" && password === "password") {
       auth.currentUser = {
@@ -256,9 +253,7 @@ export const auth = {
     }
   },
   
-  // Sign up
   createUserWithEmailAndPassword: async (email: string, password: string) => {
-    // In a real app, you would create a user in Firebase
     auth.currentUser = {
       id: "user-new",
       email: email,
@@ -267,7 +262,6 @@ export const auth = {
     return { user: auth.currentUser };
   },
   
-  // Sign out
   signOut: async () => {
     auth.currentUser = null;
   }
@@ -275,17 +269,14 @@ export const auth = {
 
 // Mock Firestore
 export const firestore = {
-  // Get orders
   getOrders: async () => {
     return mockOrders;
   },
   
-  // Get products
   getProducts: async () => {
     return mockProducts;
   },
   
-  // Get shop profile
   getShopProfile: async (shopId: string) => {
     return mockShopProfile;
   },
