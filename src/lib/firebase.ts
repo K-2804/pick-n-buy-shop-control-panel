@@ -283,7 +283,6 @@ export const firestore = {
   
   updateOrderStatus: async (orderId: string, status: Order['status']) => {
     console.log(`Updating order ${orderId} status to ${status}`);
-    // In a real app, you would update the order in Firebase
     return true;
   },
   
@@ -294,14 +293,13 @@ export const firestore = {
     return { id: `prod-new-${Date.now()}` };
   },
   
-  // Update product
+
   updateProduct: async (productId: string, product: Partial<Product>) => {
     console.log(`Updating product ${productId}`);
-    // In a real app, you would update the product in Firebase
     return true;
   },
   
-  // Delete product
+  
   deleteProduct: async (productId: string) => {
     console.log(`Deleting product ${productId}`);
     // In a real app, you would delete the product from Firebase
