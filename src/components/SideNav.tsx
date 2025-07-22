@@ -51,7 +51,6 @@ const SideNav = ({ className }: SideNavProps) => {
     setIsMobileOpen(!isMobileOpen);
   };
   
-  // Mobile menu button shown in small screens
   const mobileMenuButton = (
     <Button 
       variant="outline" 
