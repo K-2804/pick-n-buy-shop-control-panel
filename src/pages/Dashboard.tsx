@@ -17,7 +17,6 @@ const Dashboard = () => {
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
     .slice(0, 3);
   
-  // Get hot deal products
   const hotDeals = mockProducts.filter(product => product.isHotDeal).slice(0, 3);
   
   const handleOrderStatusUpdate = () => {
