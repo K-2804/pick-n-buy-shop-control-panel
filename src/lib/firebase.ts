@@ -306,7 +306,7 @@ export const firestore = {
     return true;
   },
   
-  // Update shop profile
+ 
   updateShopProfile: async (shopId: string, profile: Partial<ShopProfile>) => {
     console.log(`Updating shop profile ${shopId}`);
     // In a real app, you would update the shop profile in Firebase
@@ -316,17 +316,13 @@ export const firestore = {
 
 // Mock storage
 export const storage = {
-  // Upload file
   uploadFile: async (file: File, path: string) => {
     console.log(`Uploading file to ${path}`);
-    // In a real app, you would upload the file to Firebase Storage
     return { downloadURL: URL.createObjectURL(file) };
   }
 };
 
-// Mock auth state observer
 export const onAuthStateChanged = (callback: (user: User | null) => void) => {
   callback(auth.currentUser);
-  // Return unsubscribe function
   return () => {};
 };
