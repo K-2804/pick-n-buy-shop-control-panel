@@ -28,11 +28,10 @@ useEffect(() => {
     setOrders(liveOrders);
   });
 
-  return () => unsubscribe(); // stop listening when page unmounts
+  return () => unsubscribe(); 
 }, []);
   
   const handleOrderStatusUpdate = () => {
-    // In a real app, you would refresh the orders from Firebase
     console.log('Order status updated');
   };
   
