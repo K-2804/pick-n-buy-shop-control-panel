@@ -288,7 +288,7 @@ export const firestore = {
     return true;
   },
   
-  // Add product
+
   addProduct: async (product: Omit<Product, 'id' | 'createdAt' | 'updatedAt'>) => {
     console.log(`Adding product: ${product.name}`);
     // In a real app, you would add the product to Firebase
