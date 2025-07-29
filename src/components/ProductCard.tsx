@@ -73,7 +73,6 @@ const ProductCard = ({ product, onUpdate }: ProductCardProps) => {
     }
   };
   
-  // Delete product
   const handleDeleteProduct = async () => {
     try {
       await firestore.deleteProduct(product.id);
