@@ -36,7 +36,6 @@ const Products = () => {
   const [showOutOfStock, setShowOutOfStock] = useState(true);
   const [showHotDealsOnly, setShowHotDealsOnly] = useState(false);
   
-  // New product form state
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [newProduct, setNewProduct] = useState({
     name: '',
@@ -51,7 +50,6 @@ const Products = () => {
   });
   
   const handleProductUpdate = () => {
-    // In a real app, you would refresh products from Firebase
     console.log('Product updated');
   };
   
