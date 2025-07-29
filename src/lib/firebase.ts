@@ -104,7 +104,7 @@ export const mockOrders: Order[] = [
     ],
     totalAmount: 68,
     status: "pending",
-    createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+    createdAt: new Date(Date.now() - 1000 * 60 * 30), 
     updatedAt: new Date(Date.now() - 1000 * 60 * 30)
   },
   {
@@ -119,8 +119,8 @@ export const mockOrders: Order[] = [
     ],
     totalAmount: 12.5,
     status: "packed",
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-    updatedAt: new Date(Date.now() - 1000 * 60 * 30) // 30 minutes ago
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), 
+    updatedAt: new Date(Date.now() - 1000 * 60 * 30) 
   },
   {
     id: "order-3",
@@ -133,8 +133,8 @@ export const mockOrders: Order[] = [
     ],
     totalAmount: 6,
     status: "completed",
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
-    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 23) // 23 hours ago
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 23) 
   }
 ];
 
@@ -149,8 +149,8 @@ export const mockProducts: Product[] = [
     isHotDeal: false,
     quantity: 50,
     unit: "kg",
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 10), // 10 days ago
-    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 5) // 5 days ago
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 10), 
+    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 5) 
   },
   {
     id: "prod-2",
@@ -310,7 +310,6 @@ export const firestore = {
   }
 };
 
-// Mock storage
 export const storage = {
   uploadFile: async (file: File, path: string) => {
     console.log(`Uploading file to ${path}`);
