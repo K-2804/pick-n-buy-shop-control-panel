@@ -92,7 +92,6 @@ export interface User {
   shopId: string;
 }
 
-// Mock data for demonstration
 export const mockOrders: Order[] = [
   {
     id: "order-1",
