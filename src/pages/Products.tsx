@@ -87,25 +87,20 @@ const Products = () => {
         imageUrl: ''
       });
       
-      // In a real app, you would refresh products from Firebase
     } catch (error) {
       toast.error('Failed to add product');
     }
   };
   
   const filteredProducts = products.filter((product) => {
-    // Search query filter
     const matchesSearch = searchQuery === '' || 
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.category.toLowerCase().includes(searchQuery.toLowerCase());
     
-    // Category filter
     const matchesCategory = category === '' || product.category === category;
     
-    // Out of stock filter
     const matchesStock = showOutOfStock || product.inStock;
     
-    // Hot deals filter
     const matchesHotDeal = !showHotDealsOnly || product.isHotDeal;
     
     return matchesSearch && matchesCategory && matchesStock && matchesHotDeal;
