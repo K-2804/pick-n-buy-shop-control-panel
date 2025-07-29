@@ -38,12 +38,11 @@ useEffect(() => {
   const filterOrders = (status?: Order['status']) => {
     let filteredOrders = [...orders];
     
-    // Filter by status if provided
+
     if (status) {
       filteredOrders = filteredOrders.filter(order => order.status === status);
     }
     
-    // Filter by search query
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       filteredOrders = filteredOrders.filter(order => 
