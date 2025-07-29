@@ -12,7 +12,6 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-  // Get 3 most recent orders
   const recentOrders = [...mockOrders]
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
     .slice(0, 3);
@@ -21,12 +20,10 @@ const Dashboard = () => {
   
   const handleOrderStatusUpdate = () => {
     console.log('Order status updated');
-    // In a real app, you would refresh the orders from Firebase
   };
   
   const handleProductUpdate = () => {
     console.log('Product updated');
-    // In a real app, you would refresh the products from Firebase
   };
   
   return (
